@@ -45,9 +45,6 @@ pipeline {
     failure {
       // Upload artifacts ONLY if tests fail
       archiveArtifacts artifacts: 'playwright-report/**, test-results/**', allowEmptyArchive: true
-
-      // (Optional but recommended)
-      junit 'test-results/**/*.xml'
     }
 
     always {
